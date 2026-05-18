@@ -1,0 +1,32 @@
+.home {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #0f1b2d;
+}
+
+.home-body {
+    display: flex;
+    flex: 1;
+    margin-top: 60px;
+    overflow: hidden;
+    position: relative;
+}
+
+.home-map {
+    flex: 1;
+    position: relative;
+}
+
+.home-error {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255,107,107,0.9);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    z-index: 999;
+    font-family: 'DM Sans', sans-serif;
+}

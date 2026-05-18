@@ -1,0 +1,15 @@
+import axios from 'axios';
+
+const API = axios.create({ baseURL: 'http://localhost:8080/api' });
+
+export const getRutas = () => API.get('/rutas');
+export const buscarRutas = (tipo, criterio) => API.get(`/rutas/buscar?tipo=${tipo}&criterio=${criterio}`);
+export const registrarUsuario = (datos) => API.post('/registro', datos);
+export const getUsuarios = () => API.get('/registro');
+export const crearResena = (resena) => API.post('/resenas', resena);
+export const getResenasPorParada = (paradaId) => API.get(`/resenas/parada/${paradaId}`);
+export const crearObstruccion = (datos) => API.post('/obstrucciones', datos);
+export const getObstrucciones = () => API.get('/obstrucciones');
+export const actualizarObstruccion = (id, datos) => API.put(`/obstrucciones/${id}`, datos);
+export const eliminarObstruccion = (id) => API.delete(`/obstrucciones/${id}`);
+export const getObstraccionesActivas = () => API.get('/obstrucciones');
