@@ -1,5 +1,5 @@
 import axios from 'axios';
-const API = axios.create({ baseURL: 'https://rutabusquilla-production.up.railway.app/api' });
+const API = axios.create({ baseURL: import.meta.env.VITE_API_URL || 'http://localhost:8080/api' });
 export const getRutas = () => API.get('/rutas');
 export const buscarRutas = (tipo, criterio) => API.get('/rutas/buscar?tipo=' + tipo + '&criterio=' + criterio);
 export const registrarUsuario = (datos) => API.post('/registro', datos);
